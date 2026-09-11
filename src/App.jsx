@@ -34,7 +34,7 @@ const App = () => {
           </form>
         </div>
         {/* Right Side - Recent Notes */}
-        <div className="w-full lg:w-1/2 h-screen lg:border-l-2 border-white pl-8">
+        <div className="w-full lg:w-1/2 h-screen lg:border-l-2 border-white pl-6 lg:pl-8">
 
           <h2 className="text-4xl font-bold mb-5 mt-5 ">
             Recent Notes
