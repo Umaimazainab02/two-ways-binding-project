@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+  const [notes, setnotes] = useState('')
+  const [detail, setdetail] = useState('')
+  const submitHandler = (e)=>{
+   e.preventDefault()
+   setnotes('')
+   setdetail('')
+  }
   return (
     <div className="h-screen bg-black text-white ">
       <div className="flex flex-col lg:flex-row ">
@@ -40,13 +47,10 @@ const App = () => {
             Recent Notes
           </h2>
 
-          <div className="flex flex-wrap gap-5 overflow-auto">
-
+          <div className="flex flex-wrap gap-5 overflow-auto" onClick={notes}>
             <div className="h-55 w-68 lg:w-45 rounded-2xl bg-white"></div>
 
-            <div className="h-55 w-68 lg:w-45  rounded-2xl bg-white"></div>
-            <div className="h-55 w-68 lg:w-45  rounded-2xl bg-white"></div>
-            <div className="h-55 w-68 lg:w-45  rounded-2xl bg-white"></div>
+           
             
 
           </div>
