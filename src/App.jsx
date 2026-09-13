@@ -73,7 +73,7 @@ const App = () => {
         
         <div
           key={index}
-          className="h-55 w-68 lg:w-45 rounded-2xl  bg-center bg-no-repeat  justify-between bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGBdtlnnXXyXBQmyk4NtQd-Yt6ldulz8r5HrrkPmElQ&s=10')] text-black p-4 overflow-auto"
+          className="h-55 w-68 lg:w-45 rounded-2xl  p-8 bg-center bg-no-repeat  justify-between bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGBdtlnnXXyXBQmyk4NtQd-Yt6ldulz8r5HrrkPmElQ&s=10')] text-black overflow-auto"
         >
           <h3 className="text-xl font-bold">
             {item.notes}
