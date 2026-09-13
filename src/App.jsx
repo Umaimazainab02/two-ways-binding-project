@@ -13,6 +13,12 @@ const App = () => {
     setnotes('')
     setdetail('')
   }
+    const deleteNote = (index) => {
+  const copyTask = [...task]
+  copyTask.splice(index, 1)
+  settask(copyTask)
+
+  }
   return (
     <div className="h-screen bg-black text-white ">
       <div className="flex flex-col lg:flex-row ">
@@ -60,13 +66,14 @@ const App = () => {
     Recent Notes
   </h2>
 
-  <div className="flex flex-wrap gap-5 overflow-auto">
+  <div className="flex flex-wrap gap-5 overflow-auto ">
 
     {task.map((item, index) => {
       return (
+        
         <div
           key={index}
-          className="h-55 w-68 lg:w-45 rounded-2xl  bg-center bg-no-repeat  bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGBdtlnnXXyXBQmyk4NtQd-Yt6ldulz8r5HrrkPmElQ&s=10')] text-black p-4"
+          className="h-55 w-68 lg:w-45 rounded-2xl  bg-center bg-no-repeat  justify-between bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGBdtlnnXXyXBQmyk4NtQd-Yt6ldulz8r5HrrkPmElQ&s=10')] text-black p-4 overflow-auto"
         >
           <h3 className="text-xl font-bold">
             {item.notes}
@@ -75,7 +82,8 @@ const App = () => {
           <p className="mt-3">
             {item.detail}
           </p>
-        </div>
+          <button onClick={() => deleteNote(index)} className='mt-20  w-fit px-5  cursor-pointer active:scale-95 bg-red-500 py-1 text-xs rounded font-bold text-white'>Delete</button>
+       </div>
       )
     })}
 
